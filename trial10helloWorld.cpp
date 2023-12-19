@@ -287,6 +287,6 @@ void intro(){
     cout<<"\n\n\t BANK";
      cout<<"\n\n\t MANAGEMENT";
       cout<<"\n\n\t SYSTEM";
-       cout<<"\n\n\n MADE BY SUNIL ";
+       cout<<"\n\n\n MADE BY HELLOWORLD TEAM ";
         cout<<"\n\n COLLEGE...: JNCT\n";
 }
