@@ -984,7 +984,7 @@ if(stud1.getloginPassword() ==Loginpin){
 
 }
 if(found=='f'){
-    cout<<"Sorry Nvalid Usernme And PAssword : "<<endl;
+    cout<<"Sorry Invalid  Password... \n Please try Again... "<<endl;
 
         
     }
