@@ -760,6 +760,7 @@ static int transactionCount = 0;
 class Transactions : public Authentication
 {
 private:
+string transacc1,transacc2;
     float bal = 1000;
 
     // float amount, calCharge;
@@ -836,6 +837,8 @@ void Transactions ::CheckBalance()
 }
 void Transactions ::trans(int amt)
 {
+     cout << " Transfer To Account Number : ";
+    cin >> transacc2;
     cout << "Enter Transfer amount: ";
     cin >> amt;
     if (bal > amt && (bal - amt) >= 1000)
@@ -849,8 +852,10 @@ void Transactions ::trans(int amt)
     }
 }
 void Transactions ::trans(int amt, int charge)
-{
+{ 
     cout << "Additional Charges apply" << endl;
+     cout << " Transfer To Account Number : ";
+    cin >> transacc1;
     cout << "Enter transaction amount: ";
     cin >> amt;
     if (bal > amt && (bal - amt - charge) >= 1000)
@@ -1128,7 +1133,7 @@ int main()
 
         case '1':
         {
-            ofstream fout("BankDataFina.dat", ios::out | ios::app);
+            ofstream fout("BankDataFinal.dat", ios::out | ios::app);
 
             stud1.getPersonalDetails();
             fout.write((char *)&stud1, sizeof(stud1));
@@ -1137,7 +1142,7 @@ int main()
         }
         case '2':
         {
-            ifstream fin("BankDataFina.dat", ios::in | ios::app);
+            ifstream fin("BankDataFinal.dat", ios::in | ios::app);
             do
             {
                 cout << "Enter Your User Name : ";
